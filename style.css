@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Google Sans", sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100dvh;
+  background-color: rgb(50, 130, 135);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  height: auto;
+  max-width: 400px;
+  background-color: rgb(250, 250, 250);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+h1 {
+  text-align: center;
+  margin: 0 0 24px 0;
+  font-weight: 700;
+}
+
+label {
+  display: block;
+  font-weight: 500;
+}
+
+input {
+  border: 2px solid rgba(50, 129, 135);
+  border-radius: 4px;
+  margin: 2px 0 4px 0;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 6px;
+  width: 100%;
+}
+
+input:focus {
+  outline: none;
+}
+
+input.error {
+  color: rgb(255, 0, 0);
+  border: 2px solid rgb(255, 0, 0);
+}
+
+input.error + small {
+  display: block;
+  font-size: 13px;
+  color: rgb(255, 0, 0);
+}
+
+small {
+  display: none;
+}
+
+.result {
+  margin: 24px 0;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 6px;
+}
+
+button {
+  width: 100%;
+  border: none;
+  padding: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 4px;
+  transition: all 0.5s ease-out;
+  color: rgb(250, 250, 250);
+  background-color: rgb(50, 130, 135);
+}
+
+button:hover {
+  background-color: rgb(45, 125, 130);
+  cursor: pointer;
+  scale: 1.05;
+}
+
+@media (max-width: 320px) {
+  .container {
+    max-width: 300px;
+    padding: 18px;
+  }
+}
