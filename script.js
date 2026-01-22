@@ -21,6 +21,7 @@ const fetchApi = async () => {
                             <p>Logradouro: ${response.logradouro}</p>`;
 
         console.log(response);
+        result.style.color = "black";
       } else {
         result.innerHTML = "<p>Endereço não encontrado!</p>";
         result.style.color = "red";
