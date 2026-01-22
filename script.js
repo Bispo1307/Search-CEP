@@ -13,14 +13,18 @@ const fetchApi = async () => {
 
       cep.classList.remove("error");
 
-      if (!response.error) {
+      if (!response.erro) {
         result.innerHTML = `<p>Região: ${response.regiao}</p>
                             <p>Estado: ${response.estado}</p>
                             <p>Cidade: ${response.localidade}</p>
                             <p>Bairro: ${response.bairro}</p>
                             <p>Logradouro: ${response.logradouro}</p>`;
+
+        console.log(response);
       } else {
         result.innerHTML = "<p>Endereço não encontrado!</p>";
+        result.style.color = "red";
+        cep.classList.add("error");
       }
     } else {
       cep.classList.add("error");
