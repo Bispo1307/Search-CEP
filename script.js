@@ -6,6 +6,8 @@ const fetchApi = async () => {
   try {
     const cep = document.querySelector("#input-cep");
     if (cep.value.length === 8) {
+      result.innerHTML = `<p>Buscando endereço...</p>`;
+
       const request = await fetch(
         `https://viacep.com.br/ws/${cep.value}/json/`,
       );
